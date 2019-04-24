@@ -11,6 +11,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    'gatsby-plugin-antd',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

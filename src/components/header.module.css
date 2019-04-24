@@ -10,7 +10,12 @@
 }
 
 .h1 {
-    margin: 0
+    display: inline-block;
+    margin: 0;
+}
+
+.button {
+    float: right;
 }
 
 .Link {
