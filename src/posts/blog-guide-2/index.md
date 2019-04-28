@@ -1,8 +1,8 @@
 ---
-date: 2019-04-23
-title: "Tôi đã làm page blog này như thế nào?"
+date: 2019-04-22
+title: Mình đã làm trang blog này như thế nào (Phần 2)?
+description: Làm quen với Gatsby
 ---
-_Phần 2_
 
 ## Bắt đầu develop với Gatsby
 CLI của Gatsby có một số câu lệnh để làm dự án. Khi chạy `gatsby new blog` một số câu lệnh sẽ được đặt trong file `package.json`. Chúng ta hãy check content của nó. Để ý kĩ mục `scripts`
@@ -25,4 +25,4 @@ Bạn sẽ không cần quan tâm cái đống này viết gì, bạn chỉ cầ
 
 Okay, cuối cùng có một câu lệnh nữa là `serve`. Sau khi bạn build xong, câu lệnh này sẽ đưa thư mục `public` đến `localhost:9000`. Bạn sẽ xem được sản phẩm của mình trông chính xác như thế nào khi đưa lên hosting.
 
-Nếu bạn đã khá thoải mái với workspace của mình, hãy chuyển sang phần tiếp theo.  
+Nếu bạn đã khá thoải mái với workspace của mình, hãy chuyển sang [phần tiếp theo](/blog-guide-3).  

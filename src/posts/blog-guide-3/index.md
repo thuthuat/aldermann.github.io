@@ -1,6 +1,7 @@
 ---
 date: 2019-04-23
-title: "Tôi đã làm page blog này như thế nào?"
+title: Mình đã làm trang blog này như thế nào (Phần 3)?
+description: Làm quen với workspace và xác định được những gì cần làm
 ---
 
 _Phần 3_
@@ -40,7 +41,7 @@ Nháp xong cấu trúc, chúng ta sẽ bắt đầu build.
 
 Như bạn có thể nhìn thấy trên địa chỉ index đang có một cái ảnh, vài dòng chữ. Rõ ràng chúng ta sẽ không dùng đến cái ảnh. Ta xóa đi file `component/image.js` và xóa đoạn sử dụng cái ảnh này trong `pages/index.js`
 
-```
+```jsx
 // pages/index.js
 ...
 import Layout from "../components/layout"
@@ -61,7 +62,7 @@ export default IndexPage
 
 Cái Header có màu trông khá sida, mình sẽ chọn cho nó không có màu.
 
-```
+```jsx
 // components/header.js
 const Header = ({ siteTitle }) => (
     <header
@@ -91,7 +92,7 @@ const Header = ({ siteTitle }) => (
 
 Trông có vẻ ổn. Còn một vài cái credit các kiểu ở dưới chân, bạn cũng hãy xóa nốt.
 
-```
+```jsx
 data => (
     <>
         <Header siteTitle={data.site.siteMetadata.title} />
@@ -114,5 +115,5 @@ File `component/seo.js` chỉnh một số cái header quan trọng trong việc
 Đây sẽ là sản phẩm của bạn sau những chỉnh sửa vừa rồi:
 ![screen](screen.png)
 
-Trang web của bạn trông khá clean rồi, nhưng code thì không. Việc để style inline ngay trong các thẻ jsx sẽ làm cho nó rất xấu và khó debug. Bài tiếp theo mình sẽ hướng dẫn các bạn cách dùng file css module để tách riêng styling và js.
+Trang web của bạn trông khá clean rồi, nhưng code thì không. Việc để style inline ngay trong các thẻ jsx sẽ làm cho nó rất xấu và khó debug. [Bài tiếp theo](/blog-guide-4) mình sẽ hướng dẫn các bạn cách dùng file css module để tách riêng styling và js.
 

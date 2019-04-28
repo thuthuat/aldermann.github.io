@@ -1,19 +1,20 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "./layout"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import NavBar from "../components/navbar"
+import SEO from "./seo"
+import NavBar from "./navbar"
 
-export default function Template({data, pageContext}) {
+export default function Template({ data, pageContext }) {
     const { markdownRemark: post } = data
     const time = new Date(post.frontmatter.date)
     return (
         <>
             <Layout>
                 <SEO title={post.frontmatter.title} />
+                <h1>{post.frontmatter.title}</h1>
                 <i>{time.toDateString()}</i>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <NavBar newer={pageContext.newer} older={pageContext.older}/>
+                <NavBar newer={pageContext.newer} older={pageContext.older} />
             </Layout>
         </>
     )

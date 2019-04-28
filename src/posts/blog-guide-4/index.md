@@ -1,6 +1,7 @@
 ---
 date: 2019-04-23
-title: "Tôi đã làm page blog này như thế nào?"
+title: Mình đã làm trang blog này như thế nào (Phần 4)?
+description: Cách để style trang blog?
 ---
 
 
@@ -8,14 +9,14 @@ title: "Tôi đã làm page blog này như thế nào?"
 Nếu bạn nào đã từng làm thử web thuần chỉ HTML, CSS, JS, các bạn sẽ biết rằng, nếu file HTML include nhiều file CSS cùng lúc, thì style của nó sẽ ghi đè lên nhau. Đây gọi là Global CSS.
 
 CSS Module, ngược lại, sẽ chỉ apply style của nó trong một scope xác định. Ví dụ:
-```
+```jsx
 // JS
 import style from "./style.module.css"
 ...
-<div className={style.div}></div>
+<div className={style.div}/>
 ```
 
-```
+```css
 /*style.module.css*/
 .div {
     /* Viết style ở đây */
@@ -31,7 +32,7 @@ Gatsby hỗ trợ CSS Module out-of-the-box, bạn không cần config thêm gì
 Okay hãy thử làm một file CSS Module cho file `component\header.js`
 
 Đầu tiên tạo file `header.module.css`. Hãy nhớ rằng để CSS Module trong Gatsby hoạt động được, phải viết tên file có đuôi `.module.css`. Viết đoạn code dưới đây vào file:
-```
+```css
 .header {
     background: none;
     margin-bottom: 1.45rem;
@@ -54,7 +55,7 @@ Okay hãy thử làm một file CSS Module cho file `component\header.js`
 ```
 
 Chỉnh sửa file `component\header.js` như sau:
-```
+```jsx
 import style from "./header.module.css"
 
 const Header = ({ siteTitle }) => (
@@ -87,7 +88,7 @@ Typography.js là một thư viện giúp bạn style font chữ, màu chữ, ..
 `yarn add gatsby-plugin-typography react-typography typography typography-theme-github`
 
 Chỉnh sửa file `gatsby-config.js` ở mục `plugins`, như thế này:
-```
+```json5
     plugins: [
         {
           resolve: `gatsby-plugin-typography`,
@@ -115,4 +116,4 @@ Thực chất, file `component/layout.css` phụ trách những công việc gi�
 Và đây là thành quả:
 ![site](site.png)
 
-Looking grand. Chúng ta sẽ tiếp tục đến phần load bài blog vào page trong bài sau.
+Looking grand. Chúng ta sẽ tiếp tục đến phần load bài blog vào page trong [bài sau](/blog-guide-5).

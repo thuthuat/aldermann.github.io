@@ -1,14 +1,13 @@
 ---
 date: 2019-04-25
-title: "Tôi đã làm page blog này như thế nào?"
+title: Mình đã làm trang blog này như thế nào (Phần 7)?
+description: Làm thế nào để viết được blog dưới định dạng Markdown.
 ---
-
-_Phần 7_
 
 ## Đọc bài blog và đưa lên page.
 
 Trước tiên hãy cài đặt plugin của Gatsby:
-`yarn add gatsby-transformer-remark`
+`yarn add gatsby-transformer-remark gatsby-remark-images`
 
 Khi tôi làm đến đây, trong thư mục `posts` của mình đã có 7 bài blog rồi. Nhưng vì các bạn chưa có bài nào cả, nên chúng ta hãy cùng tạo một bài blog demo.
 
@@ -42,11 +41,24 @@ Thêm đoạn sau đây vào mục `plugins` file `gatsby-config.js`
       name: "pages",
   },
 },
-`gatsby-transformer-remark`,
+{
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 590,
+          },
+        },
+      ],
+    },
+  },
 ```
 
 ## GraphQL, GraphiQL
-Khi đọc các bài blog từ file markdown, Gatsby sẽ dịch nó thành HTML và lưu thông tin này vào dưới dạng các node tương tự như dữ liệu trong một Database và có thể truy vấn được bằng GraphQL 
+
+Khi đọc các bài blog từ file markdown, Gatsby sẽ dịch nó thành HTML và lưu thông tin này vào dưới dạng các node tương tự như dữ liệu trong một Database và có thể truy vấn được bằng GraphQL
 
 GraphQL về cơ bản là một chuẩn viết API (giống REST). Khi Gatsby tạo được danh sách resource (bài blog, ảnh ...), code frontend của bạn có thể đọc nó bằng các query GraphQL.
 
@@ -72,7 +84,7 @@ query($title: String!) {
 
 Bấm vào dòng "Query Variable" ở dưới bên tay trái, sẽ có một ô nhập liệu hiện ra. Điền đoạn code sau vào ô đó:
 
-```
+```json5
 {
   title: "Demo Blog Post"
 }
@@ -82,4 +94,4 @@ Chạy Query, bạn sẽ nhận được thông tin về bài viết của bạn
 
 ![query](query.png)
 
-Vậy chúng ta có thể đọc được thông tin của các bài blog. Trong bài tiếp theo chúng sẽ đưa nó vào trong trang web.
+Vậy chúng ta có thể đọc được thông tin của các bài blog. Trong [bài tiếp theo](/blog-guide-8) chúng sẽ đưa nó vào trong trang web.

@@ -1,7 +1,8 @@
 import Typography from "typography"
-import fairyGateTheme from "typography-theme-github"
+import theme from "typography-theme-moraga"
+theme.headerWeight = 400
 
-const typography = new Typography(fairyGateTheme)
+const typography = new Typography(theme)
 
 export const { scale, rhythm, options } = typography
 export default typography

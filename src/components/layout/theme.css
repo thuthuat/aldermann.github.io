@@ -22,6 +22,9 @@ body.dark {
     --textLinkHover: hsl(29, 54%, 61%);
     --hr: hsl(187, 47%, 55%);
 }
+p, div {
+    color: var(--textNormal);
+}
 h1 {
     color: var(--textTitle);
 }
@@ -41,10 +44,6 @@ a {
 
 a:hover {
     color: var(--textLinkHover);
-}
-
-p, div {
-    color: var(--textNormal);
 }
 hr {
     border: none;

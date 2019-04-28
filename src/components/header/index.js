@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import * as PropTypes from "prop-types"
 import style from "./header.module.css"
-import ThemeButton from "./button"
+import ThemeButton from "../button"
 
 
 const Header = ({ siteTitle }) => {

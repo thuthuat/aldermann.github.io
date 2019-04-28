@@ -1,8 +1,8 @@
 ---
 date: 2019-04-24
-title: "Tôi đã làm page blog này như thế nào?"
+title: Mình đã làm trang blog này như thế nào (Phần 5)?
+description: Sử dụng React Context để thay đổi theme
 ---
-_Phần 5_
 
 ## AntDesign
 
@@ -17,7 +17,7 @@ Thêm `'gatsby-plugin-antd'` vào mục `plugins` ở file `gatsby-config.js`
 
 Okay, hãy thêm vào file `component/header.js` một nút toggle để thay đổi giữa dark mode/light mode
 
-```
+```jsx
 // component/header.js
 const Header = ({ siteTitle }) => (
     <header className={style.header}>
@@ -39,7 +39,7 @@ const Header = ({ siteTitle }) => (
 )
 ```
 
-```
+```css
 /*components/header.module.css*/
 /*Sửa mục này*/
 .h1 {
@@ -112,7 +112,7 @@ export { ThemeProvider }
 
 Sau đó, để register ContextProvider này, ta cần chỉnh sửa file `gatsby-browser.js`
 
-```
+```jsx
 import React from "react"
 
 import { ThemeProvider } from "./src/context"
@@ -126,7 +126,7 @@ Bây giờ bạn có thể access hai giá trị này ở `component/header.js`
 
 Sửa file này như sau:
 
-```
+```jsx
 import ThemeContext from "../context"
 import { useContext } from "react"
 
@@ -156,4 +156,4 @@ const Header = ({ siteTitle }) => {
 Bây giờ, nếu bạn bấm vào nút bấm ở Header, bạn sẽ thấy dòng chữ "dark" và "light" luân phiên thay đổi.
 ![toggle](toggle.png)
 
-Trong bài tiếp theo, mình sẽ tìm cách để thông tin light và dark này thay đổi style của trang.
+Trong [bài tiếp theo](/blog-guide-6), mình sẽ tìm cách để thông tin light và dark này thay đổi style của trang.

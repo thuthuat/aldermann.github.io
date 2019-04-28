@@ -1,16 +1,15 @@
 ---
 date: 2019-04-24
-title: "Tôi đã làm page blog này như thế nào?"
+title: Mình đã làm trang blog này như thế nào (Phần 6)?
+description: Phần styling cho theme
 ---
-
-_Phần 6_
 
 ## Ý tưởng để thay đổi theme.
 Khi thay đổi theme, ta sẽ thay đổi className của `<body>`. Ứng với mỗi class sẽ có setting màu riêng dành cho page.
 
 Đầu tiên, thay đổi className của `<body>` như sau:
 
-```
+```js
 // context.js
 class ThemeProvider extends React.Component {
     switchTheme = () => {
@@ -33,7 +32,7 @@ Bây giờ, nếu ta inspect element, ta sẽ thấy class của `<body>` thay �
 ## CSS-Variable
 Tạo một file `theme.css` ở `components` và cho `layout.js` import nó. Điền vào file này đoạn code dưới đây.
 
-```
+```css
 body.light {
     --primary: hsl(  5, 74%, 59%);
     --secondary: hsl(221, 87%, 60%);
@@ -92,4 +91,4 @@ Bây giờ, bạn có thể bấm vào nút bấm hình bóng đèn và thấy t
 ![dark](dark.png)
 ![light](light.png)
 
-Okay, mình sẽ tìm cách để Gatsby load các bài blog trong bài viết sau.
+Okay, mình sẽ tìm cách để Gatsby load các bài blog trong [bài viết sau](/blog-guide-7).

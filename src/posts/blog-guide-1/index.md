@@ -1,13 +1,13 @@
 ---
 date: 2019-04-22
-title: "Tôi đã làm page blog này như thế nào?"
+title: Mình đã làm trang blog này như thế nào (Phần 1)?
+description: Ý tưởng về một trang blog của mình sinh ra như thế nào?
 ---
-_Phần 1_
 
 ## Mở đầu
 
 All right. Đây sẽ là bài blog đầu tiên trong đời của mình.
-  
+
 Ý tưởng làm một cái blog với mình thực ra đã có từ lâu rồi, nhưng mình chưa thực sự có thời gian để dành cho việc xây dựng một trang blog. Hơn nữa, viết blog là viết văn, và mình không giỏi văn cho lắm, vì thế mình cũng lo ngại rằng làm xong trang blog rồi mình lại lười viết.  
 
 Nhưng mình đang trên con đường thay đổi bản thân mình, vậy bắt đầu từ đây cũng là một ý tưởng hay ho. 
@@ -56,7 +56,8 @@ Nhìn qua một chút, chúng ta sẽ thấy nó có một thư mục `src` nơi
 
 Các file `gatsby-*.js` dùng để tinh chỉnh một số setting của Gatsby. Tạm thời chưa sờ gì đến nó vội.
 
-Okay chúng ta sẽ học cách bắt đầu làm việc với Gatsby trong bài sau.
+Okay chúng ta sẽ học cách bắt đầu làm việc với Gatsby trong [bài sau](/blog-guide-2)
+.
 
  
 
