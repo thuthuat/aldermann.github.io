@@ -1,0 +1,15 @@
+.button {
+    float: right;
+}
+
+.icon {
+    transition: opacity 0.5s ease-in-out !important;
+    color: transparent;
+    position: relative;
+}
+.sun {
+    right: 8px;
+}
+.moon {
+    left: 8px;
+}
