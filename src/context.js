@@ -16,7 +16,7 @@ class ThemeProvider extends React.Component {
         const theme = this.state.theme === "dark" ? "light" : "dark"
         localStorage.setItem("theme", theme)
         document.body.className = `switch ${theme}`
-        setTimeout(() => document.body.className = theme, 500);
+        setTimeout(() => (document.body.className = theme), 500)
         this.setState({ theme })
     }
 

@@ -143,7 +143,7 @@ const AboutPage = () => {
             </div>
             <hr />
             <h1>Credit where it's due</h1>
-            <Credit/>
+            <Credit />
         </Layout>
     )
 }

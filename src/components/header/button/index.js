@@ -26,12 +26,12 @@ const ThemeButton = () => {
         >
             <Icon
                 className={`${style.icon} ${style.moon}`}
-                style={theme === "dark" ? {opacity: 0} : {opacity: 1}}
+                style={theme === "dark" ? { opacity: 0 } : { opacity: 1 }}
                 component={Moon}
             />
             <Icon
                 className={`${style.icon} ${style.sun}`}
-                style={theme === "light" ? {opacity: 0} : {opacity: 1}}
+                style={theme === "light" ? { opacity: 0 } : { opacity: 1 }}
                 component={Sun}
             />
         </Button>

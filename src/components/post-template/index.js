@@ -11,14 +11,17 @@ export default function Template({ data, pageContext }) {
     return (
         <>
             <Layout>
-                <SEO title={post.frontmatter.title} keywords={post.frontmatter.keyword}/>
+                <SEO
+                    title={post.frontmatter.title}
+                    keywords={post.frontmatter.keyword}
+                />
                 <div className={style.title}>
                     <h1>{post.frontmatter.title}</h1>
                     <i>{time.toDateString()}</i>
                 </div>
-                <hr/>
+                <hr />
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <hr/>
+                <hr />
                 <NavBar newer={pageContext.newer} older={pageContext.older} />
             </Layout>
         </>

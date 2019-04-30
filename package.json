@@ -45,7 +45,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "yarn run develop",
+    "start": "pnpm run develop",
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "just_deploy": "gh-pages -d public -b master",

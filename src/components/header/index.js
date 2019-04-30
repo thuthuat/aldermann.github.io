@@ -4,7 +4,6 @@ import * as PropTypes from "prop-types"
 import style from "./header.module.css"
 import ThemeButton from "./button"
 
-
 const Header = ({ siteTitle, siteDescription }) => {
     return (
         <header className={style.header}>
@@ -14,9 +13,9 @@ const Header = ({ siteTitle, siteDescription }) => {
                         {siteTitle}
                     </Link>
                 </h1>
-                <br/>
+                <br />
                 <i>{siteDescription}</i>
-                <ThemeButton/>
+                <ThemeButton />
             </div>
         </header>
     )
@@ -24,12 +23,12 @@ const Header = ({ siteTitle, siteDescription }) => {
 
 Header.propTypes = {
     siteTitle: PropTypes.string,
-    siteDescription: PropTypes.string
+    siteDescription: PropTypes.string,
 }
 
 Header.defaultProps = {
     siteTitle: ``,
-    siteDescription : ``,
+    siteDescription: ``,
 }
 
 export default Header

@@ -1,11 +1,4 @@
-const tagInfo = [
-    "react",
-    "programming",
-    "music",
-    "guitar",
-    "blog",
-    "guide"
-]
+const tagInfo = ["react", "programming", "music", "guitar", "blog", "guide"]
 
 const lightColor = {
     react: "blue",
@@ -25,4 +18,4 @@ const darkColor = {
     guide: "#2f54eb",
     default: "#faad14",
 }
-export { lightColor, darkColor, tagInfo}
+export { lightColor, darkColor, tagInfo }
