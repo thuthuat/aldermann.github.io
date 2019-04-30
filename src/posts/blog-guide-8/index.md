@@ -2,6 +2,10 @@
 date: 2019-04-26
 title: Mình đã làm trang blog này như thế nào (Phần 8)?
 description: Tạo trang blog từ những file bài blog?
+keyword:
+    - react
+    - programming
+    - guide
 ---
 
 ## Slug Field?

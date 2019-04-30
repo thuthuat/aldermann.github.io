@@ -2,6 +2,10 @@
 date: 2019-04-27
 title: Mình đã làm trang blog này như thế nào (Phần 9)?
 description: Tạo danh sách bài blog.
+keyword:
+    - react
+    - programming
+    - guide
 ---
 
 Chúng ta đã có thể đọc các bài viết trên blog của mình, tuy nhiên một trang blog hoàn chỉnh cần có một danh sách các bài blog, thường nằm ở trang chính (index)

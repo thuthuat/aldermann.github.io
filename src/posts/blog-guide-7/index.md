@@ -2,12 +2,16 @@
 date: 2019-04-25
 title: Mình đã làm trang blog này như thế nào (Phần 7)?
 description: Làm thế nào để viết được blog dưới định dạng Markdown.
+keyword:
+    - react
+    - programming
+    - guide
 ---
 
 ## Đọc bài blog và đưa lên page.
 
 Trước tiên hãy cài đặt plugin của Gatsby:
-`yarn add gatsby-transformer-remark gatsby-remark-images`
+`bash~yarn add gatsby-transformer-remark gatsby-remark-images`
 
 Khi tôi làm đến đây, trong thư mục `posts` của mình đã có 7 bài blog rồi. Nhưng vì các bạn chưa có bài nào cả, nên chúng ta hãy cùng tạo một bài blog demo.
 
@@ -22,8 +26,8 @@ Bây giờ điền vào file `index.md` này đoạn code sau:
 ```markdown
 
 ---
-date: 2019-03-01
-title: "Demo Blog Post"
+date: 2019-03-01  
+title: "Demo Blog Post"  
 ---
 
 # My first blog post!
@@ -33,7 +37,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales, erat a cur
 
 Thêm đoạn sau đây vào mục `plugins` file `gatsby-config.js`
 
-```
+```json
 {
   resolve: `gatsby-source-filesystem`,
   options: {
@@ -69,7 +73,7 @@ Nếu bạn làm đúng theo những bước vừa rồi, chúng ta có thể qu
 -   Truy cập `localhost:8000/___graphql`
 -   Nhập đoạn code sau vào mục bên tay trái:
 
-```
+```graphql
 
 query($title: String!) {
     markdownRemark(frontmatter: { title: { eq: $title } }) {

@@ -1,0 +1,22 @@
+.about {
+}
+.block {
+    vertical-align: top;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.avatar {
+    margin-right: 40px;
+}
+.bio {
+    width: 400px;
+}
+.hobby {
+    margin-right: 200px;
+}
+.language {
+    margin-right: 50px;
+}
+.introduction p, .introduction i {
+    font-size: 15px;
+}

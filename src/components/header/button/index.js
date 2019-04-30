@@ -1,8 +1,8 @@
 import { Button, Icon } from "antd"
-import Moon from "../../images/moon.svg"
-import Sun from "../../images/sun.svg"
+import Moon from "../../../images/moon.svg"
+import Sun from "../../../images/sun.svg"
 import React, { useContext } from "react"
-import ThemeContext from "../../context"
+import ThemeContext from "../../../context"
 import style from "./button.module.css"
 
 const lightButtonStyle = {
@@ -21,6 +21,7 @@ const ThemeButton = () => {
             className={style.button}
             style={theme === "light" ? lightButtonStyle : darkButtonStyle}
             shape="circle"
+            aria-label="Theme Button"
             onClick={switchTheme}
         >
             <Icon

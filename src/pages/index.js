@@ -1,52 +1,67 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
+import * as PropTypes from "prop-types"
+import { Pagination } from "antd"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import style from "./index.module.css"
+import Info from "../components/info"
+import TagList from "../components/tagList"
 
-const IndexPage = ({ data }) => {
-    const { edges: posts } = data["allMarkdownRemark"]
+const PageEntry = ({ post }) => {
+    const { title, keyword, date, description } = post.frontmatter
+    return (
+        <>
+            <div className={style["blogPostPreview"]} key={post.id}>
+                <h2>
+                    <Link to={post.fields["slug"]}>{title}</Link>
+                </h2>
+                <i>{new Date(date).toDateString()}</i>
+                <div className={style.divider} />
+                <TagList keyword={keyword} />
+                <br />
+                <br />
+                <h4>{description}</h4>
+            </div>
+            <hr />
+        </>
+    )
+}
+
+function IndexPage({ data }) {
+    let { edges: posts } = data["allMarkdownRemark"]
+    posts = posts.filter(post => post.node.frontmatter.title.length > 0)
+    const [page, setPage] = useState(1)
     return (
         <Layout>
             <SEO
                 title="Home"
                 keywords={[
-                    `programming`,
-                    `music`,
-                    `blogging`,
+                    "programming",
+                    "music",
+                    "blogging",
                     "guitar",
                     "developer",
                 ]}
             />
+            <Info />
             <div>
-                {posts
-                    .filter(post => post.node.frontmatter.title.length > 0)
-                    .map(({ node: post }) => {
-                        return (
-                            <div
-                                className={style["blogPostPreview"]}
-                                key={post.id}
-                            >
-                                <h2>
-                                    <Link to={post.fields["slug"]}>
-                                        {post.frontmatter.title}
-                                    </Link>
-                                </h2>
-                                <i>
-                                    {new Date(
-                                        post.frontmatter.date
-                                    ).toDateString()}
-                                </i>
-
-                                <h4>{post.frontmatter.description}</h4>
-                            </div>
-                        )
-                    })}
+                {posts.slice((page - 1) * 5, page * 5).map(({ node: post }) => (
+                    <PageEntry key={post.id} post={post} />
+                ))}
             </div>
+            <Pagination
+                className={style.pagination}
+                total={posts.length}
+                pageSize={5}
+                onChange={page => setPage(page)}
+            />
         </Layout>
     )
 }
+
+IndexPage.propTypes = { data: PropTypes.any }
 
 export default IndexPage
 
@@ -59,6 +74,7 @@ export const pageQuery = graphql`
                         title
                         date
                         description
+                        keyword
                     }
                     fields {
                         slug

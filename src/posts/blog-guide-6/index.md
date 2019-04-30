@@ -2,6 +2,10 @@
 date: 2019-04-24
 title: Mình đã làm trang blog này như thế nào (Phần 6)?
 description: Phần styling cho theme
+keyword:
+    - react
+    - programming
+    - guide
 ---
 
 ## Ý tưởng để thay đổi theme.

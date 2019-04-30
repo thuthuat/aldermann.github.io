@@ -1,8 +1,9 @@
 import React from "react"
-import Layout from "./layout"
+import Layout from "../layout"
 import { graphql } from "gatsby"
-import SEO from "./seo"
+import SEO from "../seo"
 import NavBar from "./navbar"
+import style from "./style.module.css"
 
 export default function Template({ data, pageContext }) {
     const { markdownRemark: post } = data
@@ -10,10 +11,14 @@ export default function Template({ data, pageContext }) {
     return (
         <>
             <Layout>
-                <SEO title={post.frontmatter.title} />
-                <h1>{post.frontmatter.title}</h1>
-                <i>{time.toDateString()}</i>
+                <SEO title={post.frontmatter.title} keywords={post.frontmatter.keyword}/>
+                <div className={style.title}>
+                    <h1>{post.frontmatter.title}</h1>
+                    <i>{time.toDateString()}</i>
+                </div>
+                <hr/>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <hr/>
                 <NavBar newer={pageContext.newer} older={pageContext.older} />
             </Layout>
         </>
@@ -26,6 +31,7 @@ export const query = graphql`
             frontmatter {
                 date
                 title
+                keyword
             }
             fields {
                 slug

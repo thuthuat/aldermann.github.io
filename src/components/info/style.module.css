@@ -1,0 +1,10 @@
+.about {
+    margin-bottom: 70px;
+}
+.description {
+    /*height: 64px;*/
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    top: 12px;
+}

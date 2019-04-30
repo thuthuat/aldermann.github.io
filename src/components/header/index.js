@@ -2,10 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 import * as PropTypes from "prop-types"
 import style from "./header.module.css"
-import ThemeButton from "../button"
+import ThemeButton from "./button"
 
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, siteDescription }) => {
     return (
         <header className={style.header}>
             <div className={style.div}>
@@ -14,6 +14,8 @@ const Header = ({ siteTitle }) => {
                         {siteTitle}
                     </Link>
                 </h1>
+                <br/>
+                <i>{siteDescription}</i>
                 <ThemeButton/>
             </div>
         </header>
@@ -22,10 +24,12 @@ const Header = ({ siteTitle }) => {
 
 Header.propTypes = {
     siteTitle: PropTypes.string,
+    siteDescription: PropTypes.string
 }
 
 Header.defaultProps = {
     siteTitle: ``,
+    siteDescription : ``,
 }
 
 export default Header

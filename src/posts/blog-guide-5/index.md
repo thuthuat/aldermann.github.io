@@ -2,6 +2,10 @@
 date: 2019-04-24
 title: Mình đã làm trang blog này như thế nào (Phần 5)?
 description: Sử dụng React Context để thay đổi theme
+keyword:
+    - react
+    - programming
+    - guide
 ---
 
 ## AntDesign

@@ -1,7 +1,11 @@
 ---
-date: 2019-04-22
+date: 2019-04-22 19:00:00
 title: Mình đã làm trang blog này như thế nào (Phần 2)?
 description: Làm quen với Gatsby
+keyword:
+    - react
+    - programming
+    - guide
 ---
 
 ## Bắt đầu develop với Gatsby

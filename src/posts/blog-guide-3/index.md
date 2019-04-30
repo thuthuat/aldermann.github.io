@@ -2,6 +2,10 @@
 date: 2019-04-23
 title: Mình đã làm trang blog này như thế nào (Phần 3)?
 description: Làm quen với workspace và xác định được những gì cần làm
+keyword:
+    - react
+    - programming
+    - guide
 ---
 
 _Phần 3_

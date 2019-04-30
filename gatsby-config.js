@@ -1,8 +1,9 @@
 module.exports = {
     siteMetadata: {
         title: `A Day in My Life`,
-        description: `a normal guy's blog`,
+        description: `a learner's journal`,
         author: `aldermann`,
+        siteUrl: "https://aldermann.github.io"
     },
     plugins: [
         {
@@ -42,7 +43,7 @@ module.exports = {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
                             classPrefix: "language-",
-                            inlineCodeMarker: null,
+                            inlineCodeMarker: "~",
                             aliases: {},
                             showLineNumbers: true,
                             noInlineHighlight: false,
@@ -56,14 +57,17 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `aldermann blog`,
+                short_name: `blog`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#000000`,
+                theme_color: `#000000`,
                 display: `minimal-ui`,
-                icon: `src/images/gatsby-icon.png`,
+                icon: `src/images/icon.png`,
             },
         },
+        'gatsby-plugin-offline',
+        'gatsby-plugin-sitemap',
+        'gatsby-plugin-robots-txt'
     ],
 }
