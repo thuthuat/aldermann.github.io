@@ -1,8 +1,7 @@
 before_install:
   - curl -L https://unpkg.com/@pnpm/self-installer | node
 install:
-  - pnpm install
-
+  - pnpm --shamefully-flatten -f i
 branches:
   only:
     - develop

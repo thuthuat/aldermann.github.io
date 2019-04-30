@@ -1,5 +1,6 @@
 dependencies:
   antd: 3.16.6
+  babel-plugin-import: 1.11.0
   gatsby: 2.3.34
   gatsby-image: 2.0.41
   gatsby-plugin-antd: 2.0.2
@@ -13480,6 +13481,7 @@ packages:
       integrity: sha512-aynRpmJDw7JIq6X4NDWJoiK1yVSiG57ArWSg4HLC1SFupX5/bo0Cf4jpX0ifwuzBfxpYBuNSyvMlWNNRuy3cVA==
 specifiers:
   antd: ^3.16.5
+  babel-plugin-import: ^1.11.0
   gatsby: ^2.3.25
   gatsby-image: ^2.0.39
   gatsby-plugin-antd: ^2.0.2
