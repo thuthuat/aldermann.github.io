@@ -1,7 +1,3 @@
-before_install:
-  - curl -L https://unpkg.com/@pnpm/self-installer | node
-install:
-  - pnpm --shamefully-flatten -f i
 branches:
   only:
     - develop
@@ -9,13 +5,12 @@ language: node_js
 cache:
   directories:
     - ~/.npm
-    
 node_js:
   - '9'
 git:
   depth: 3
 script:
-  - pnpm run build
+  - npm run build
 deploy:
   provider: pages
   skip-cleanup: true

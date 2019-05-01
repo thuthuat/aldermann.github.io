@@ -1,19 +1,18 @@
 import { Tag } from "antd"
 import React, { useContext } from "react"
-import { lightColor, darkColor } from "./tagInfo"
+import getTagColor from "./tagInfo"
 import ThemeContext from "../../context"
 
 import * as PropTypes from "prop-types"
 
 const TagList = ({ keyword, closable, onTagClose }) => {
     const { theme } = useContext(ThemeContext)
-    const tagColor = theme === "light" ? lightColor : darkColor
     return (
         <>
             {keyword.map((word, index) => (
                 <Tag
                     key={index}
-                    color={tagColor[word] || tagColor.default}
+                    color={getTagColor(word, theme)}
                     closable={closable}
                     onClose={onTagClose(word)}
                 >

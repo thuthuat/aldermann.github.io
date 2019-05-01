@@ -4,6 +4,7 @@ body.light {
     --bg: hsl(230, 1%, 98%);
     --textTitle: hsl(301, 63%, 40%);
     --textNormal: hsl(230, 8%, 24%);
+    --textBold: hsl(230, 1%, 0%);
     --header: hsl(230, 1%, 0%);
     --textLinkHover: hsl(41, 99%, 30%);
     --textLink: hsl(41, 99%, 38%);
@@ -17,6 +18,7 @@ body.dark {
     --bg: hsl(220, 13%, 18%);
     --textTitle: hsl(286, 60%, 67%);
     --textNormal: hsl(220, 14%, 71%);
+    --textBold: hsl(220, 1%, 100%);
     --header: hsl(220, 1%, 100%);
     --textLink: hsl(39, 67%, 69%);
     --textLinkHover: hsl(29, 54%, 61%);
@@ -41,7 +43,9 @@ body {
 a {
     color: var(--textLink);
 }
-
+b, strong {
+    color: var(--textBold);
+}
 a:hover {
     color: var(--textLinkHover);
 }

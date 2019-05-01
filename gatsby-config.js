@@ -6,6 +6,7 @@ module.exports = {
         siteUrl: "https://aldermann.github.io"
     },
     plugins: [
+        `gatsby-remark-reading-time`,
         {
             resolve: `gatsby-plugin-typography`,
             options: {
@@ -34,6 +35,16 @@ module.exports = {
             options: {
                 plugins: [
                     {
+                        resolve: "gatsby-remark-embed-video",
+                        options: {
+                            width: 800,
+                            ratio: 1.77,
+                            height: 400,
+                            related: false,
+                            noIframeBorder: true
+                        }
+                    },
+                    {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 590,
@@ -48,7 +59,7 @@ module.exports = {
                             showLineNumbers: true,
                             noInlineHighlight: false,
                         },
-                    },
+                    }
                 ],
             },
         },

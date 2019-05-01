@@ -17,8 +17,12 @@ const PageEntry = ({ post }) => {
                 <h2>
                     <Link to={post.fields["slug"]}>{title}</Link>
                 </h2>
-                <i>{new Date(date).toDateString()}</i>
-                <div className={style.divider} />
+                <i>
+                    {new Date(date).toDateString()}{" • "}
+                    {post.fields.readingTime.text}
+                </i>
+                <br />
+                <br />
                 <TagList keyword={keyword} />
                 <br />
                 <br />
@@ -78,6 +82,9 @@ export const pageQuery = graphql`
                     }
                     fields {
                         slug
+                        readingTime {
+                            text
+                        }
                     }
                 }
             }
