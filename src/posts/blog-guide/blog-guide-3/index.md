@@ -119,5 +119,5 @@ File `component/seo.js` chỉnh một số cái header quan trọng trong việc
 Đây sẽ là sản phẩm của bạn sau những chỉnh sửa vừa rồi:
 ![screen](screen.png)
 
-Trang web của bạn trông khá clean rồi, nhưng code thì không. Việc để style inline ngay trong các thẻ jsx sẽ làm cho nó rất xấu và khó debug. [Bài tiếp theo](/blog-guide-4) mình sẽ hướng dẫn các bạn cách dùng file css module để tách riêng styling và js.
+Trang web của bạn trông khá clean rồi, nhưng code thì không. Việc để style inline ngay trong các thẻ jsx sẽ làm cho nó rất xấu và khó debug. Bài tiếp theo mình sẽ hướng dẫn các bạn cách dùng file css module để tách riêng styling và js.
 

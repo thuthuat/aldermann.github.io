@@ -160,4 +160,4 @@ const Header = ({ siteTitle }) => {
 Bây giờ, nếu bạn bấm vào nút bấm ở Header, bạn sẽ thấy dòng chữ "dark" và "light" luân phiên thay đổi.
 ![toggle](toggle.png)
 
-Trong [bài tiếp theo](/blog-guide-6), mình sẽ tìm cách để thông tin light và dark này thay đổi style của trang.
+Trong bài tiếp theo, mình sẽ tìm cách để thông tin light và dark này thay đổi style của trang.

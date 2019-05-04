@@ -29,4 +29,4 @@ Bạn sẽ không cần quan tâm cái đống này viết gì, bạn chỉ cầ
 
 Okay, cuối cùng có một câu lệnh nữa là `serve`. Sau khi bạn build xong, câu lệnh này sẽ đưa thư mục `public` đến `localhost:9000`. Bạn sẽ xem được sản phẩm của mình trông chính xác như thế nào khi đưa lên hosting.
 
-Nếu bạn đã khá thoải mái với workspace của mình, hãy chuyển sang [phần tiếp theo](/blog-guide-3).  
+Nếu bạn đã khá thoải mái với workspace của mình, hãy chuyển sang phần tiếp theo.  

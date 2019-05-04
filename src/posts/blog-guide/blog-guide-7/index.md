@@ -98,4 +98,4 @@ Chạy Query, bạn sẽ nhận được thông tin về bài viết của bạn
 
 ![query](query.png)
 
-Vậy chúng ta có thể đọc được thông tin của các bài blog. Trong [bài tiếp theo](/blog-guide-8) chúng sẽ đưa nó vào trong trang web.
+Vậy chúng ta có thể đọc được thông tin của các bài blog. Trong bài tiếp theo chúng sẽ đưa nó vào trong trang web.

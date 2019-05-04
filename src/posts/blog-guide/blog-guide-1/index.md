@@ -60,7 +60,7 @@ Nhìn qua một chút, chúng ta sẽ thấy nó có một thư mục `src` nơi
 
 Các file `gatsby-*.js` dùng để tinh chỉnh một số setting của Gatsby. Tạm thời chưa sờ gì đến nó vội.
 
-Okay chúng ta sẽ học cách bắt đầu làm việc với Gatsby trong [bài sau](/blog-guide-2)
+Okay chúng ta sẽ học cách bắt đầu làm việc với Gatsby trong bài sau
 .
 
  

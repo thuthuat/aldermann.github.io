@@ -95,4 +95,4 @@ Bây giờ, bạn có thể bấm vào nút bấm hình bóng đèn và thấy t
 ![dark](dark.png)
 ![light](light.png)
 
-Okay, mình sẽ tìm cách để Gatsby load các bài blog trong [bài viết sau](/blog-guide-7).
+Okay, mình sẽ tìm cách để Gatsby load các bài blog trong bài viết sau.

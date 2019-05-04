@@ -120,4 +120,4 @@ Thực chất, file `component/layout.css` phụ trách những công việc gi�
 Và đây là thành quả:
 ![site](site.png)
 
-Looking grand. Chúng ta sẽ tiếp tục đến phần load bài blog vào page trong [bài sau](/blog-guide-5).
+Looking grand. Chúng ta sẽ tiếp tục đến phần load bài blog vào page trong bài sau.

@@ -83,4 +83,4 @@ export const pageQuery = graphql`
 
 Sau khi restart lại lệnh `gatsby develop`, bạn sẽ thấy được danh sách các bài blog của mình
 
-Vậy là trang blog của bạn coi như đã hoàn thiện. Trong [bài tiếp theo](/blog-guide-10), mình sẽ hướng dẫn các bạn deploy code lên netlify để sử dụng.
+Vậy là trang blog của bạn coi như đã hoàn thiện. Trong bài tiếp theo, mình sẽ hướng dẫn các bạn deploy code lên netlify để sử dụng.

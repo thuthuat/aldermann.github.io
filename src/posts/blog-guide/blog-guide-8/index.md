@@ -124,4 +124,4 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 Bạn có thể cần restart lại `gatsby develop` để nó có hiệu lực.
 Nếu bây giờ bạn đến địa chỉ `localhost:8000/demo`, bạn sẽ đọc được bài blog của mình.
 
-Trong [bài tiếp theo](/blog-guide-9) mình sẽ hướng dẫn bạn tạo danh sách bài viết ở trang chủ.
+Trong bài tiếp theo mình sẽ hướng dẫn bạn tạo danh sách bài viết ở trang chủ.
