@@ -14,7 +14,7 @@ body.light pre[class*="language-"] {
     line-height: 1.5;
     direction: ltr;
     text-align: left;
-    white-space: pre-wrap;
+    white-space: pre;
     word-spacing: normal;
     word-break: normal;
     -moz-tab-size: 4;
