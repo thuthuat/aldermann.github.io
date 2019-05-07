@@ -14,6 +14,7 @@ export default function Template({ data, pageContext }) {
                 <SEO
                     title={post.frontmatter.title}
                     keywords={post.frontmatter.keyword}
+                    description={post.frontmatter.description}
                 />
                 <div className={style.title}>
                     <h1>{post.frontmatter.title}</h1>
@@ -35,6 +36,7 @@ export const query = graphql`
                 date
                 title
                 keyword
+                description
             }
             fields {
                 slug

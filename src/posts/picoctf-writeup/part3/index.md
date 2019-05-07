@@ -14,7 +14,7 @@ You can see in the table that this is a Vignere cypher. Use some Vignere decyphe
 ***
 
 ## Crypto Warmup 2
-This is a rot13 cypher. You can use a decypher program to do it, or use the `tr` command in Linux to do it, like this: `tr A-Za-z N-ZA-Mn-za-m <<< "cvpbPGS{guvf_vf_pelcgb!}"`
+This is a rot13 cypher. You can use a decypher program to do it, or use the `tr` command in Linux to do it, like this: `bash~tr A-Za-z N-ZA-Mn-za-m <<< "cvpbPGS{guvf_vf_pelcgb!}"`
 
 ***
 
