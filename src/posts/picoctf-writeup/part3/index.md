@@ -92,7 +92,7 @@ This one will ask you to calculate the totient of $n$ or $\phi(n)$, which is sta
 The next one will need you to use Python console, because they'll help you with calculations on big number. I really recommend installing IPython, for which you can find installation instruction [here](https://ipython.org/install.html). IPython is basically a better shell than Python's default, offering you instropection, completion, and shell history.
 
 Okay, open a terminal and run `ipython` to start it. This question ask you to calculate the $ciphertext$ from the plaintext, $e$ and $n$. Look at the encryption section of the wiki page to see how. Since we are not specified any padding scheme, let's use the plaintext message as $m$ in the formula, which is $c=m^{e}\mod {n}$. The IPython console might look like this:
-```py3
+```python
 In [1]: plaintext = 181590718...                                                   
 
 In [2]: e = 3                                                                   
@@ -113,15 +113,14 @@ Next, they will ask you to get the $plaintext$ from the $ciphertext$, $e$ and $n
 ### 7<sup>th</sup> question:
 The question requires you to calculate $d$ that follows the relation $de \equiv  1 (\textrm{mod}\ \phi(n))$, or $d$ is the modular inverse of e. To calculate this, use the Extended Euclidean Algorithm. I've included a quick implementation of it that I found online, just paste it in your IPython shell. The whole process should look like this:
 
-```py3
-In [1]: q = 920920768...                                                                                                                                     
+```python
+In [1]: q = 920920768...             
 
-In [2]: p = 978467753...                                                                                                                                     
+In [2]: p = 978467753...             
 
-In [3]: e = 65537 
-                                                                                                                      
+In [3]: e = 65537                                                                                                     
 
-In [4]: totient = (q - 1) * (p - 1)                                                                                                           
+In [4]: totient = (q - 1) * (p - 1)
 
 In [5]: def egcd(a, b): 
             if a == 0: 
@@ -129,15 +128,15 @@ In [5]: def egcd(a, b):
             else: 
                 g, y, x = egcd(b % a, a) 
                 return (g, x - (b // a) * y, y) 
-         
+
         def modinv(a, m): 
             g, x, y = egcd(a, m) 
             return x % m 
-                                                                                                                                              
 
-In [6]: d = modinv(e, totient)                                                                                                                
+In [6]: d = modinv(e, totient)
 
-In [7]: d                                                                                                                                     
+In [7]: d
+
 Out[7]: 140504626...
 ```
 
@@ -148,18 +147,18 @@ This is the final and most complicated question, requiring you to decrypt the $c
 
 The formula given is $m = c^d \mod n$, where $m$ would be the final plaintext that you need and $c$ is the ciphertext that you're given. First you get $q = n / p$, then you can calculate $d$ by following the same procedure as in the last question. Finally, you can use the `py~pow(c, d, n)` function in Python to quickly calculate $c^d \mod n$. The whole IPython console should look like this.
 
-```
-In [1]: p = 153143042...        
+```python
+In [1]: p = 153143042...
 
-In [2]: e = 65537                      
+In [2]: e = 65537
 
 In [3]: n = 239529373...
 
-In [4]: c = 313988037...                             
+In [4]: c = 313988037...
 
 In [5]: q = n // p
 
-In [6]: totient = (q - 1) * (p - 1)    
+In [6]: totient = (q - 1) * (p - 1)
 
 In [7]: def egcd(a, b): 
             if a == 0: 
@@ -172,9 +171,12 @@ In [7]: def egcd(a, b):
             g, x, y = egcd(a, m) 
             return x % m 
 
-In [8]: d = modinv(e, totient)                                                                                                               
-In [9]: m = pow(c, d, n)                                                                                                                     
-In [10]: m                                                                                                                                    
+In [8]: d = modinv(e, totient)
+
+In [9]: m = pow(c, d, n)
+
+In [10]: m
+                      
 Out[10]: 240109877...
 ```
 
@@ -182,16 +184,20 @@ Grab that final output and input it, to get pass the question.
 
 Finally, they ask you to convert that output to hex, then to ASCII to get the flag. You can use the following command in Python to do it.
 
-```py3
+```python
 In [15]: hex_string = hex(m) 
 
-In [16]: hex_string                                                                                                                           
+In [16]: hex_string
+
 Out[16]: '0x7069636f4354467b64305f755f6b6e30775f7468335f7740795f325f5253405f38643037393632337d'
 
-In [19]: bytearray.fromhex(hex_string[2:]).decode()                                                                                                    
+In [19]: bytearray.fromhex(hex_string[2:]).decode()
+
 Out[19]: 'picoCTF{...}'
 ```
 
 The `py3~hex_string[2:]` is to strip of the two signal character `0x` at the begining of the hex_string.
+
+***
 
 Well that's it for a day. Let's continue on this later.
