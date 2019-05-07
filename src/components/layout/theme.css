@@ -56,5 +56,5 @@ hr {
     color: var(--hr);
 }
 body * {
-    transition: color 0.5s linear, background-color 0.5s linear;
+    transition: color 0.5s linear, background-color 0.5s linear !important;
 }

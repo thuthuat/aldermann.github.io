@@ -12,6 +12,8 @@ keyword:
 
 This is basically a more randomized and timed version of the first 3 problems. After `bash~nc` to the adresss provided by the description, you'll be presented with three quizzes, which require you to convert a string, either in hexadecimal, binary or octal into its ASCII presentation. Just use a converter like [this one](https://codebeautify.org/hex-string-converter) to convert it. Remember to be quick, because they only allow 30 seconds for each quiz.
 
+***
+
 ## You can't see me
 
 Login to the shell and goto the directory specified. Doing a `bash~ls` shows nothing.
@@ -29,6 +31,8 @@ That's really confusing isn't it. However, if you are familiar with Linux shells
 However, you can not execute any command that refers directly to the name `.`, because the shell will mistake it for the current directory itself. So in order to find the flag, you should use some command that target the whole directory instead. `bash~grep` is a good bet.
 
 To `bash~grep` at a directory, you must include the `-R` flag (recursive). The complete command is `bash~grep "picoCTF" -R .` (the `.` here refers to the folder, not the file). Run that, and the flag will magically appear before you
+
+***
 
 ## Absolutely relative.
 
@@ -112,5 +116,5 @@ Running `./in-out-error > /dev/null` yields the flag.
 
 ***
 
-Starting from here the problem is starting to get harder. Let's checkout other category first.
+Starting from here the problem is starting to get harder. Let's checkout [other category](/picoctf-writeup/part3/) first before coming back here.
 

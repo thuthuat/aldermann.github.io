@@ -147,4 +147,4 @@ Close the webshell. Open a terminal on your computer and run `bash~ssh 2018shell
 
 ***
 
-Okay that's enough for a blog post. Remember to check back for Part 2
+Okay that's enough for a blog post. Remember to check back for [Part 2](/picoctf-writeup/part2/)
